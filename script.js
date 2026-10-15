@@ -17,3 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log("Сайт успешно загружен и анимации активны!");
 });
+
+// тут были изменения
