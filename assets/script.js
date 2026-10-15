@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                [entry.target.classList.add('visible')](https://entry.target.classlist.add(/);
+                entry.target.classList.add('visible');
                 observer.unobserve(entry.target); // Анимируем только один раз
             }
         });
@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Начинаем наблюдение
     elements.forEach(el => observer.observe(el));
-
+    
     console.log("Сайт успешно загружен и анимации активны!");
 });
