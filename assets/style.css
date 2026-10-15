@@ -1,0 +1,71 @@
+:root {
+    --primary: #4f46e5;
+    --bg: #f8fafc;
+    --text: #1e293b;
+    --card-bg: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: var(--primary);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+}
+
+/* Анимация появления (JS будет добавлять класс .visible) */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--text);
+    color: white;
+    margin-top: auto;
+}
