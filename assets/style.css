@@ -134,6 +134,12 @@ section {
     margin-bottom: 0.8rem;
 }
 
+.card-main {
+    display: flex;
+    height: 200px;
+    width: 220px;
+}
+
 .section-title {
     margin: 2.25rem 0 1rem;
 }
@@ -242,12 +248,6 @@ footer p {
 /* Анимация не мешает содержимому отображаться, если JavaScript отключён. */
 .fade-in {
     animation: fade-up 650ms ease both;
-}
-
-.card-main {
-    display: flex;
-    height: 200px;
-    width: 220px;
 }
 
 @keyframes fade-up {
