@@ -244,6 +244,12 @@ footer p {
     animation: fade-up 650ms ease both;
 }
 
+.card-main {
+    display: flex;
+    height: 200px;
+    width: 220px;
+}
+
 @keyframes fade-up {
     from {
         opacity: 0;
