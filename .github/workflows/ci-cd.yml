@@ -1,0 +1,53 @@
+name: CI/CD Static Site
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # 1. Проверка (CI)
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Проверка наличия основных файлов
+        run: |
+          echo "Проверяем структуру проекта..."
+          if [ ! -f index.html ]; then echo "Ошибка: нет index.html"; exit 1; fi
+          if [ ! -f assets/style.css ]; then echo "Ошибка: нет style.css"; exit 1; fi
+          echo "✅ Все файлы на месте!"
+
+  # 2. Деплой (CD) - запускается ТОЛЬКО если check прошел успешно
+  deploy:
+    needs: check
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Деплоим корень репозитория
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

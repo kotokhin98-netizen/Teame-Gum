@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Team Dev Studio</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="contact.html" class="active">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="fade-in">
+            <h1>📬 Свяжитесь с нами</h1>
+            <p class="lead">Мы всегда открыты для новых проектов и идей!</p>
+        </section>
+
+        <section class="fade-in">
+            <div class="card">
+                <h2>📧 Email</h2>
+                <p>Напишите нам на почту, и мы ответим в течение 24 часов.</p>
+                <p class="contact-info">teamdevstudio@example.com</p>
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <div class="card">
+                <h2>💬 Социальные сети</h2>
+                <p>Подписывайтесь на нас, чтобы следить за обновлениями:</p>
+                <ul class="contact-list">
+                    <li>🐙 <strong>GitHub:</strong> github.com/teamdevstudio</li>
+                    <li>💬 <strong>Telegram:</strong> @teamdevstudio</li>
+                    <li> <strong>Twitter:</strong> @teamdevstudio</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <div class="card">
+                <h2>📍 Наш офис</h2>
+                <p>Мы работаем удалённо из разных городов, но всегда на связи!</p>
+                <p class="contact-info">
+                     Работаем по всему миру<br>
+                    ⏰ Часовой пояс: UTC+3<br>
+                    📅 Рабочие дни: Пн-Пт
+                </p>
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <div class="card">
+                <h2>📝 Оставить заявку</h2>
+                <p>Хотите заказать проект? Заполните форму ниже (демо-версия):</p>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами.');">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Ваш email" required>
+                    <textarea placeholder="Опишите ваш проект" rows="4" required></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <div class="card highlight">
+                <h2>⚡ Быстрый ответ</h2>
+                <p>Мы ценим ваше время. Обычно отвечаем в течение нескольких часов в рабочее время. Для срочных вопросов используйте Telegram.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Team Dev Studio. Создано с ❤️ и GitHub Actions.</p>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

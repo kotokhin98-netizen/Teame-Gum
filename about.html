@@ -3,107 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты | Team Dev Studio</title>
+    <meta name="description" content="Узнайте больше о команде Team Dev Studio, наших принципах и навыках веб-разработки.">
+    <title>О нас | Team Dev Studio</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Основная навигация">
             <ul>
                 <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
+                <li><a href="about.html" class="active" aria-current="page">О нас</a></li>
                 <li><a href="services.html">Услуги</a></li>
                 <li><a href="portfolio.html">Портфолио</a></li>
-                <li><a href="contact.html" class="active">Контакты</a></li>
+                <li><a href="contact.html">Контакты</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
-        <section class="fade-in">
-            
-📬 Свяжитесь с нами📬            Мы всегда открыты для новых проектов и идей!
+    <main class="container about-page">
+        <section class="fade-in page-hero">
+            <p class="eyebrow">Знакомство с командой</p>
+            <h1>Создаём цифровые решения вместе 🚀</h1>
+            <p class="lead">Team Dev Studio — команда, которая объединяет разработку, дизайн и автоматизацию, чтобы превращать идеи в удобные и современные веб-проекты.</p>
         </section>
 
         <section class="fade-in">
             <div class="card">
-                
-📧 Email
-
-                Напишите нам на почту, и мы ответим в течение 24 часов.
-                
-teamdevstudio@example.com
-
-            
+                <h2>Кто мы</h2>
+                <p>Мы — команда из трёх участников, которая развивает навыки веб-разработки и DevOps на практике. Создаём сайты на HTML, CSS и JavaScript, работаем с Git и настраиваем автоматическую публикацию проектов через GitHub Actions и GitHub Pages.</p>
+                <p>Для нас важны понятный код, доступный интерфейс, совместная работа и постоянное улучшение результата.</p>
+            </div>
         </section>
 
         <section class="fade-in">
-            <div class="card">
-                
-💬 Социа📧ные сети
-
-                <p>Подписывайтесь на нас, чтобы следить за обновлениями:</p>
-                
-                    
-💬 GitHub: github.com/teamdevstudio
-                    
-📍 Telegram: @teamdevstudio
-
-
-                    
- Twitter: @teamdevstudio
-
-
-                
+            <h2 class="section-title">Наша команда</h2>
+            <div class="team-grid">
+                <article class="card team-card">
+                    <div class="team-icon" aria-hidden="true">💻</div>
+                    <h3>Артём Котохин</h3>
+                    <p class="team-role">Лидер команды · Frontend</p>
+                    <p>Координирует работу и отвечает за главную страницу и раздел «О нас».</p>
+                    <img class="card-main" src="Artem.png">
+                </article>
+                <article class="card team-card">
+                    <div class="team-icon" aria-hidden="true">⚙️</div>
+                    <h3>Никита Бакшилов</h3>
+                    <p class="team-role">DevOps · Frontend</p>
+                    <p>Работает над CI/CD, а также страницами услуг и портфолио, перепроверяет сайт.</p>
+                    <img class="card-main" src="nikit.png">
+                </article>
+                <article class="card team-card">
+                    <div class="team-icon" aria-hidden="true">🎨</div>
+                    <h3>Ярослав Толстухин</h3>
+                    <p class="team-role">Frontend · Дизайн</p>
+                    <p>Развивает визуальный стиль сайта, CSS-оформление и JavaScript-анимации.</p>
+                    <img class="card-main" src="Yarik.png">
+                </article>
             </div>
         </section>
 
         <section class="fade-in">
             <div class="card">
-                
-⏰ Наш офис
-
-      💬        Мы работаем удалённо из разных городов, но всегда на связи!
-                <p class="contact-info">
-                     Работаем по всему миру<br>
-                    📅 Часовой пояс: UTC+3
-
-       💬         [📝 Рабочие дни: Пн-Пт](https://github.com/teamdevstudio)                </p>
- 📍         </div>
-        </section>
-
-        <section class="fade-in">
-            
-                
-⚡ Оставить заявку
-
-                Хотите заказать проект? Заполните форму ниже (демо-версия):
-                
-                    
-                    
-                    
-                    Отправить
-                
+                <h2>Как мы работаем</h2>
+                <ul class="feature-list">
+                    <li>🧩 Разбиваем проект на понятные задачи и распределяем ответственность.</li>
+                    <li>🔀 Используем Git и GitHub для совместной работы над кодом.</li>
+                    <li>📱 Проверяем, чтобы сайт был удобен на телефонах и компьютерах.</li>
+                    <li>🚀 Автоматизируем проверки и публикацию с помощью GitHub Actions.</li>
+                </ul>
             </div>
         </section>
 
         <section class="fade-in">
             <div class="card highlight">
-                
-❤️ Быстрый⏰ответ
-
-                Мы ценим ваше время. Обычно отвечаем в течение нескольких часов в рабочее время. Для срочных вопросов используйте Telegram.
+                <h2>Давайте создадим что-то хорошее</h2>
+                <p>Есть идея или хотите обсудить проект? Посмотрите наши услуги или свяжитесь с командой.</p>
+                <div class="button-row">
+                    <a class="button-link" href="services.html">Наши услуги</a>
+                    <a class="button-link button-link-secondary" href="contact.html">Связаться с нами</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        
-© 2024 Team Dev Studio. Создано с  и GitHub Actions.
-
-
+        <p>&copy; 2026 Team Dev Studio. Создано с ❤️ и GitHub Actions.</p>
     </footer>
 
-    <script src="assets/script.js">
-
-
+    <script src="assets/script.js"></script>
+</body>
+</html>
